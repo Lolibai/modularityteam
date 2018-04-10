@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common'; 
 import { OneComponent } from './one.component';
-import { OneRoutingModule } from './one.routing';
+import { OneRoutingModule } from './one.routing.module';
 
   
 @NgModule({
