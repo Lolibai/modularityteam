@@ -1,4 +1,7 @@
-
+<div class="col-xs-10 col-xs-offset-1">
+    <a routerLink="/op">op</a>
+    <a [routerLink]="'/op/opa'">opa</a>
+    </div>
 
 <div style="background-color:#eeeeee; margin: auto; text-align: center;">
   <!-- Start cssSlider.com -->
@@ -66,3 +69,5 @@
     <br /><br />
     <p class='text-1'>Resposive pure CSS <a href="http://cssslider.com">slider</a> with CSS3 animations, autoplay, kenburns, prev/next,<br /> bullets  with tooltips - no JavaScript! Vector icons only - no images. </p>
     </div>
+
+    <router-outlet></router-outlet>
