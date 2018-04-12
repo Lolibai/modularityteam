@@ -15,6 +15,7 @@ export class ColaborationComponent implements OnInit {
   title: string;
   arr = [];
   id;
+  item;
   users: User[] = [];
   userName: '';
   profiles;
@@ -34,10 +35,10 @@ export class ColaborationComponent implements OnInit {
     });
     this.userName = '';
   }
-  getUser() {
-    this.usersService.getUser().subscribe(res => {
-      console.log(res);
-      this.profiles = res;
+  getUser(id) {
+    this.usersService.getUser(id).subscribe(res => {
+      this.item = res;
+      console.log(this.item.name);
     });
   }
   getAll() {

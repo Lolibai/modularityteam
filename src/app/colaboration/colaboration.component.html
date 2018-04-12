@@ -12,6 +12,9 @@
   
   </form>
   
+  <input type="text" name="search" id="" [(ngModel)]="search" #searchi>
+  <button (click) = "getUser(searchi.value)">enter</button>
+
   <ol>
     <li *ngFor="let item of arr; let id = index;">
       <span><p>Wellcome:</p> {{item.title}}</span>

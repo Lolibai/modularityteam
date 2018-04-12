@@ -12,8 +12,8 @@ export class UsersService {
     addUser(user: any) {
         return this.http.post('http://192.168.88.210:8080/api/user', user);
     }
-    getUser() {
-        return this.http.get('http://192.168.88.210:8080/api/user/1');
+    getUser(id) {
+        return this.http.get (`http://192.168.88.210:8080/api/user/${id}`);
     }
     getAll() {
         return this.http.get('http://192.168.88.210:8080/api/users');

@@ -11,8 +11,8 @@ import { NavService } from '../../services/nav.service';
   styleUrls: ['./user.component.scss']
 })
 export class UserComponent implements OnInit {
-  route: any;
-  userService: any;
+  // route: any;
+  // userService: any;
   @Input() name: User;
 
   constructor() {}
@@ -22,8 +22,8 @@ export class UserComponent implements OnInit {
   }
 
   getUser(): void {
-    const id = +this.route.snapshot.paramMap.get('id');
-    this.userService.getUser(id)
-      .subscribe(user => this.name = name);
+    // const id = +this.route.snapshot.paramMap.get('id');
+    // this.userService.getUser(id)
+    // .subscribe(user => this.name = name);
   }
 }
