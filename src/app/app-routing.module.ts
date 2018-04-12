@@ -3,7 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { AccountModule } from './account/account.module';
 import { OpModule } from './op/op.module';
 
-const routes: Routes = [
+export const routes: Routes = [
   { path: '', pathMatch: 'full', redirectTo: 'account' },
   { path: 'account', loadChildren: () => AccountModule },
   { path: 'op', loadChildren: () => OpModule },
@@ -11,7 +11,7 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(routes, {enableTracing: true})],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }

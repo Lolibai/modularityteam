@@ -1,0 +1,22 @@
+<form>
+    <div class="form-group">
+      <input type="text" name="title" [(ngModel)]="userName" class="form-control" >
+      <!-- <input type="text" name="id" [(ngModel)]="userId" class="form-control" > -->
+      <button (click)="addUser()" type="button" class="btn btn-danger">Add</button>
+      <button (click)="editArr()" type="button" class="btn btn-success"></button>
+      <button (click)="getUser()" type="button" class="btn btn-warning">Get User</button>
+      <button (click)="getAll()" type="button" class="btn btn-warning">Get all</button>
+      <button (click)="delAll()" type="button" class="btn btn-warning">Del all</button>
+  
+    </div>
+  
+  </form>
+  
+  <ol>
+    <li *ngFor="let item of arr; let id = index;">
+      <span><p>Wellcome:</p> {{item.title}}</span>
+      <button class="my btn btn-primary" (click)="remove(i);">Remove</button>
+      <button (click)="pushEdit(id,item)" class="btn btn-primary">Edit</button>
+    </li>
+  </ol>
+
