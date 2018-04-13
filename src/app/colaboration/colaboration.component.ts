@@ -53,30 +53,14 @@ export class ColaborationComponent implements OnInit {
       this.profiles = res;
     });
   }
+  delOne(id) {
+    this.usersService.delOne(id).subscribe(res => {
+      console.log(res);
+      this.getAll();
+    });
+  }
 
   ngOnInit(): void {
   }
 
 }
-
-  // }
-  // pushEdit(id, item) {
-  //   this.title = item.title;
-  //   this.id = id;
-  // }
-  // editArr() {
-  //   this.arr[this.id].title = this.title;
-  //   this.title = '';
-  // }
-  // edit(i, item) {
-  //    this.input = item.title;
-  //    return this.input;
-  // }
-  // remove(ind: number) {
-  //     this.arr.splice(ind, 1);
-  // }
-  // removeAll(ind: number) {
-  //   this.arr.splice(ind, this.arr.length);
-  // }
-
-

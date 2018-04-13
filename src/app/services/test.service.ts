@@ -21,4 +21,10 @@ export class UsersService {
     delAll() {
         return this.http.delete('http://192.168.88.210:8080/api/users');
     }
+    delOne(id) {
+        return this.http.delete (`http://192.168.88.210:8080/api/user/${id}`);
+    }
+    editInput(id: number, name: string) {
+        return this.http.put (`http://192.168.88.210:8080/api/user`, {id, name});
+}
 }
