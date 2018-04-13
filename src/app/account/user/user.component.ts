@@ -19,10 +19,10 @@ export class UserComponent implements OnInit {
   constructor(public route: ActivatedRoute, public userService: UsersService) { }
 
   ngOnInit(): void {
-    this.getUser2();
+    this.getUser();
   }
 
-  getUser2(): void {
+  getUser(): void {
     const id = this.route.snapshot.paramMap.get('id');
     this.userService.getUser(id)
       .subscribe(user => {console.log(user); this.user = user; });
