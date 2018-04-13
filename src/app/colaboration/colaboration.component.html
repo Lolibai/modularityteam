@@ -2,7 +2,7 @@
     <div class="form-group row">
       <input type="text" name="title" [(ngModel)]="userName" class="form-control col-sm-2" >
       <button (click)="addUser()" type="button" class="btn btn-default b1">Add</button>
-      <button (click)="getUser()" type="button" class="btn btn-default b1">Get User</button>
+      <button [routerLink]="['/account/user', 'id']" type="button" class="btn btn-default b1">Get User</button>
       <button (click)="getAll()" type="button" class="btn btn-default b1">Get all</button>
       <button (click)="delAll()" type="button" class="btn btn-default b1">Del all</button>
       <!-- <button (click)="delOne()" type="button" class="btn btn-default b1">Del User</button> -->
