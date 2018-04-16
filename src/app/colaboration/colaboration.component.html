@@ -1,8 +1,9 @@
 <form>
+  <p>directive=red</p>
     <div class="form-group row">
       <input type="text" name="title" [(ngModel)]="userName" class="form-control col-sm-2" >
-      <button (click)="addUser()" type="button" class="btn btn-default b1">Add</button>
-      <button [routerLink]="['/account/user', 'id']" type="button" class="btn btn-default b1">Get User</button>
+      <button appStyle (click)="addUser()" type="button" class="btn btn-default b1">Add</button>
+      <button appStyle [routerLink]="['/account/user', 'id']" type="button" class="btn btn-default b1">Get User</button>
       <button (click)="getAll()" type="button" class="btn btn-default b1">Get all</button>
       <button (click)="delAll()" type="button" class="btn btn-default b1">Del all</button>
       <!-- <button (click)="delOne()" type="button" class="btn btn-default b1">Del User</button> -->
@@ -14,6 +15,6 @@
     <li *ngFor="let item of profiles" >
       <button class="b1 btn btn-primary" (click)="delOne(item._id)">Delete</button>
       <!-- <button (click)="editInput(item)" class=" b1 btn btn-primary">Edit</button> -->
-      {{item.name}} <button class="b1" (click)="go(item._id)">{{item._id}}</button>
+      {{item.name}} <button class="b1" [routerLink]="['/account/user', 'id']">{{item._id}}</button>
     </li>
   </ol>

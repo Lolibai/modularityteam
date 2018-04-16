@@ -7,12 +7,14 @@ import { ColaborationComponent } from './colaboration/colaboration.component';
 import { UsersService } from './services/test.service';
 import { HttpClientModule } from '@angular/common/http';
 import { RouterModule } from '@angular/router';
+import { StyleDirective } from './directives/style.directive';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    ColaborationComponent
+    ColaborationComponent,
+    StyleDirective
   ],
   imports: [
     BrowserModule,
