@@ -14,6 +14,6 @@
     <li *ngFor="let item of profiles" >
       <button class="b1 btn btn-primary" (click)="delOne(item._id)">Delete</button>
       <!-- <button (click)="editInput(item)" class=" b1 btn btn-primary">Edit</button> -->
-      {{item.name}} <button class="b1" [routerLink]="['/account/user', 'id']">{{item._id}}</button>
+      {{item.name}} <button class="b1" (click)="go(item._id)">{{item._id}}</button>
     </li>
   </ol>

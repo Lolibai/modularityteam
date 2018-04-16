@@ -3,6 +3,7 @@ import { ValueTransformer } from '@angular/compiler/src/util';
 import { Title } from '@angular/platform-browser';
 import { User } from '../models/user.model';
 import { UsersService } from '../services/test.service';
+import { Router } from '@angular/router';
 
 
 @Component({
@@ -21,7 +22,7 @@ export class ColaborationComponent implements OnInit {
   profiles;
 
 
-  constructor(public usersService: UsersService) { }
+  constructor(public usersService: UsersService, public router: Router) { }
 
   // addUser() {
   //   this.usersService.addUser({name: this.userName}).subscribe(res => {
@@ -61,6 +62,12 @@ export class ColaborationComponent implements OnInit {
   }
 
   ngOnInit(): void {
+  }
+
+  go(id) {
+    this.router.navigate(['/account/user', id]);
+    this.usersService.getUser(id)
+      .subscribe(user => {console.log(user); this.usersService.user = user; });
   }
 
 }

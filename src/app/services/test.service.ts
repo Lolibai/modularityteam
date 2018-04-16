@@ -3,6 +3,7 @@ import { HttpClient } from '@angular/common/http';
 
 @Injectable()
 export class UsersService {
+    user: any = '';
     constructor(private http: HttpClient) { }
 
     // getUsers() {

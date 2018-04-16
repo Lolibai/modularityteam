@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, OnChanges } from '@angular/core';
 import { routes } from '../../app-routing.module';
 import { User } from '../../models/user.model';
 import { NavService } from '../../services/nav.service';
@@ -14,17 +14,7 @@ import { UsersService } from '../../services/test.service';
 })
 export class UserComponent implements OnInit {
 
-  user: any;
-
   constructor(public route: ActivatedRoute, public userService: UsersService) { }
 
-  ngOnInit(): void {
-    this.getUser();
-  }
-
-  getUser(): void {
-    const id = this.route.snapshot.paramMap.get('id');
-    this.userService.getUser(id)
-      .subscribe(user => {console.log(user); this.user = user; });
-  }
+  ngOnInit(): void {}
 }
