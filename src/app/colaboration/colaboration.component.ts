@@ -5,7 +5,6 @@ import { User } from '../models/user.model';
 import { UsersService } from '../services/test.service';
 import { Router } from '@angular/router';
 
-
 @Component({
   selector: 'app-colaboration',
   templateUrl: './colaboration.component.html',
