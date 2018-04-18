@@ -1,3 +1,4 @@
+
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
@@ -8,6 +9,7 @@ import { UsersService } from './services/test.service';
 import { HttpClientModule } from '@angular/common/http';
 import { RouterModule } from '@angular/router';
 import { StyleDirective } from './directives/style.directive';
+import { OneComponent } from './one/one.component';
 
 
 @NgModule({
@@ -15,6 +17,7 @@ import { StyleDirective } from './directives/style.directive';
     AppComponent,
     ColaborationComponent,
     StyleDirective
+    OneComponent,
   ],
   imports: [
     BrowserModule,
