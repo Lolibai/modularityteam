@@ -18,3 +18,23 @@
       {{item.name}} <button class="b1" (click)="go(item._id)">{{item._id}}</button>
     </li>
   </ol>
+
+
+<form>
+  <div class="form-group">
+      <input disabled type="text" name="id" class="form-control" [(ngModel)]="id">
+    <input type="text" name="title" class="form-control" [(ngModel)]="title">
+  
+    <button type="button" class="btn btn-success" (click)="save()">Save</button>
+    <button (click)="delAll();" type="button" class="btn btn-warning">Remove all</button>
+  </div>
+
+</form>
+<ol>
+  <li *ngFor="let item of profiles" >{{item.name}}
+    <button class="my btn btn-primary" (click)="delOne(item._id)">Remove</button>
+    <button (click)="editInput(item)" class="btn btn-primary">Edit</button>
+  </li>
+</ol>
+  
+  

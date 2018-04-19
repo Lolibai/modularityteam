@@ -47,26 +47,55 @@ export class ColaborationComponent implements OnInit {
       this.profiles = res;
     });
   }
-  delAll() {
-    this.usersService.delAll().subscribe(res => {
-      console.log(res);
-      this.profiles = res;
-    });
-  }
-  delOne(id) {
-    this.usersService.delOne(id).subscribe(res => {
-      console.log(res);
-      this.getAll();
-    });
-  }
-
-  ngOnInit(): void {
-  }
 
   go(id) {
     this.router.navigate(['/account/user', id]);
     this.usersService.getUser(id)
       .subscribe(user => {console.log(user); this.usersService.user = user; });
   }
+
+  //get user 
+  getUsers() {
+    this.usersService.getUsers().subscribe(res => {
+      console.log(res);
+      this.profiles = res;
+    });
+
+  }
+  //delete all user
+
+  delAll() {
+    this.usersService.delAll().subscribe(res => {
+      console.log(res);
+      this.getUsers();
+    });
+  }
+// delete one user
+  delOne(id) {
+    this.usersService.delOne(id).subscribe(res => {
+      console.log(res);
+      this.getUsers();
+    });
+  }
+
+  //input take name arr
+  editInput(item) {
+    this.title = item.name;
+    this.id = item._id;
+  }
+// save new name 
+  save () {
+    this.usersService.editArr(this.id,this.title).subscribe(res => {
+      console.log(res);
+      this.getUsers();
+    });
+  }
+
+
+  ngOnInit(): void {
+    this.getUsers();
+  }
+
+  
 
 }

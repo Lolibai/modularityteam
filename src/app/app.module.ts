@@ -1,4 +1,3 @@
-
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
@@ -16,7 +15,7 @@ import { OneComponent } from './one/one.component';
   declarations: [
     AppComponent,
     ColaborationComponent,
-    StyleDirective
+    StyleDirective,
     OneComponent,
   ],
   imports: [
