@@ -7,29 +7,29 @@ export class UsersService {
   constructor(private http: HttpClient) {}
 
   addUser(user: any) {
-    return this.http.post("http://localhost:8080/api/user", user);
+    return this.http.post("http://localhost:8081/api/user", user);
   }
   getUser(id) {
-    return this.http.get(`http://localhost:8080/api/user/${id}`);
+    return this.http.get(`http://localhost:8081/api/user/${id}`);
   }
   getAll() {
-    return this.http.get("http://localhost:8080/api/users");
+    return this.http.get("http://localhost:8081/api/users");
   }
   editInput(id: number, name: string) {
-    return this.http.put(`http://localhost:8080/api/user`, { id, name });
+    return this.http.put(`http://localhost:8081/api/user`, { id, name });
   }
   getUsers() {
-    return this.http.get("http://localhost:8080/api/users");
+    return this.http.get("http://localhost:8081/api/users");
   }
 
   delOne(id) {
-    return this.http.delete(`http://localhost:8080/api/user/${id}`);
+    return this.http.delete(`http://localhost:8081/api/user/${id}`);
   }
   delAll() {
-    return this.http.delete("http://localhost:8080/api/users");
+    return this.http.delete("http://localhost:8081/api/users");
   }
 
   editArr(id: number, name: string) {
-    return this.http.put("http://localhost:8080/api/user", { id, name });
+    return this.http.put("http://localhost:8081/api/user", { id, name });
   }
 }
