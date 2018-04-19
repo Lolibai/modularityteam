@@ -8,7 +8,6 @@ import { UsersService } from './services/test.service';
 import { HttpClientModule } from '@angular/common/http';
 import { RouterModule } from '@angular/router';
 import { StyleDirective } from './directives/style.directive';
-import { OneComponent } from './one/one.component';
 
 
 @NgModule({
@@ -16,7 +15,6 @@ import { OneComponent } from './one/one.component';
     AppComponent,
     ColaborationComponent,
     StyleDirective,
-    OneComponent,
   ],
   imports: [
     BrowserModule,
