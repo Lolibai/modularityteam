@@ -5,8 +5,8 @@ import { OpModule } from './op/op.module';
 
 export const routes: Routes = [
   { path: '', pathMatch: 'full', redirectTo: 'account' },
-  { path: 'account', loadChildren: () => AccountModule },
-  { path: 'op', loadChildren: () => OpModule },
+  { path: 'account', loadChildren: "./account/account.module#AccountModule" },
+  { path: 'op', loadChildren: "./op/op.module#OpModule" },
   { path: '**', redirectTo: 'account' }
 ];
 
